@@ -1,4 +1,4 @@
-ypo
+HumanKontact
 ===
 
-YPO-WPO Mobile Development
+HumanKontact Mobile Development
