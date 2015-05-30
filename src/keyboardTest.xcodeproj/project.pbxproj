@@ -7,11 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		163863C71B038E9E00680EDD /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163863C61B038E9E00680EDD /* FavoritesTableViewController.swift */; };
+		7506F7C81B081533001F78EA /* APAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 7506F7BE1B081533001F78EA /* APAddress.m */; };
+		7506F7C91B081533001F78EA /* APAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 7506F7C01B081533001F78EA /* APAddressBook.m */; };
+		7506F7CA1B081533001F78EA /* APContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 7506F7C21B081533001F78EA /* APContact.m */; };
+		7506F7CB1B081533001F78EA /* APPhoneWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7506F7C41B081533001F78EA /* APPhoneWithLabel.m */; };
+		7506F7CC1B081533001F78EA /* APSocialProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7506F7C61B081533001F78EA /* APSocialProfile.m */; };
+		7506F7CD1B0826F2001F78EA /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759C84031B010911008D3A34 /* AddressBook.framework */; };
+		7506F7CE1B0826F2001F78EA /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759C84041B010911008D3A34 /* AddressBookUI.framework */; };
+		7563C8C21B16006400C7E311 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7563C8C11B16006400C7E311 /* KeyboardViewController.swift */; };
 		759C83E31AFFBFD1008D3A34 /* RightDrawerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759C83E21AFFBFD1008D3A34 /* RightDrawerTableViewController.swift */; };
 		759C83F31B00DE5A008D3A34 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759C83F21B00DE5A008D3A34 /* BrowseViewController.swift */; };
 		759C83F71B00EF31008D3A34 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759C83F61B00EF31008D3A34 /* FavoritesViewController.swift */; };
 		759C83F91B00F4F2008D3A34 /* RecentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759C83F81B00F4F2008D3A34 /* RecentsViewController.swift */; };
 		759C83FB1B00F8A4008D3A34 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759C83FA1B00F8A4008D3A34 /* SettingsViewController.swift */; };
+		759C83FF1B010863008D3A34 /* libkannuu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 759C83FE1B010863008D3A34 /* libkannuu.a */; };
+		759C84021B0108CE008D3A34 /* AddressBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 759C84011B0108CE008D3A34 /* AddressBookController.m */; };
+		75CAEB711B0E62BB00A9DB7C /* FavoritesViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CAEB701B0E62BB00A9DB7C /* FavoritesViewControllerExtensions.swift */; };
+		75FC10FB1B190C3C00AD99F4 /* DashboardBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FC10FA1B190C3C00AD99F4 /* DashboardBarViewController.swift */; };
 		8EF27BBB1AAFFD7400F93112 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF27BBA1AAFFD7400F93112 /* AppDelegate.swift */; };
 		8EF27BBD1AAFFD7400F93112 /* PagingViewController0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF27BBC1AAFFD7400F93112 /* PagingViewController0.swift */; };
 		8EF27BC01AAFFD7400F93112 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EF27BBE1AAFFD7400F93112 /* Main.storyboard */; };
@@ -74,11 +87,33 @@
 
 /* Begin PBXFileReference section */
 		12D0D21D1AC60D56A97D65A2 /* Pods_keyboardTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_keyboardTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		163863C61B038E9E00680EDD /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		7506F7BD1B081533001F78EA /* APAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APAddress.h; path = APAddressBook/Pod/Core/APAddress.h; sourceTree = SOURCE_ROOT; };
+		7506F7BE1B081533001F78EA /* APAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APAddress.m; path = APAddressBook/Pod/Core/APAddress.m; sourceTree = SOURCE_ROOT; };
+		7506F7BF1B081533001F78EA /* APAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APAddressBook.h; path = APAddressBook/Pod/Core/APAddressBook.h; sourceTree = SOURCE_ROOT; };
+		7506F7C01B081533001F78EA /* APAddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APAddressBook.m; path = APAddressBook/Pod/Core/APAddressBook.m; sourceTree = SOURCE_ROOT; };
+		7506F7C11B081533001F78EA /* APContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APContact.h; path = APAddressBook/Pod/Core/APContact.h; sourceTree = SOURCE_ROOT; };
+		7506F7C21B081533001F78EA /* APContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APContact.m; path = APAddressBook/Pod/Core/APContact.m; sourceTree = SOURCE_ROOT; };
+		7506F7C31B081533001F78EA /* APPhoneWithLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPhoneWithLabel.h; path = APAddressBook/Pod/Core/APPhoneWithLabel.h; sourceTree = SOURCE_ROOT; };
+		7506F7C41B081533001F78EA /* APPhoneWithLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPhoneWithLabel.m; path = APAddressBook/Pod/Core/APPhoneWithLabel.m; sourceTree = SOURCE_ROOT; };
+		7506F7C51B081533001F78EA /* APSocialProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APSocialProfile.h; path = APAddressBook/Pod/Core/APSocialProfile.h; sourceTree = SOURCE_ROOT; };
+		7506F7C61B081533001F78EA /* APSocialProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APSocialProfile.m; path = APAddressBook/Pod/Core/APSocialProfile.m; sourceTree = SOURCE_ROOT; };
+		7506F7C71B081533001F78EA /* APTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APTypes.h; path = APAddressBook/Pod/Core/APTypes.h; sourceTree = SOURCE_ROOT; };
+		7563C8C11B16006400C7E311 /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		759C83E21AFFBFD1008D3A34 /* RightDrawerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightDrawerTableViewController.swift; sourceTree = "<group>"; };
 		759C83F21B00DE5A008D3A34 /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		759C83F61B00EF31008D3A34 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		759C83F81B00F4F2008D3A34 /* RecentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentsViewController.swift; sourceTree = "<group>"; };
 		759C83FA1B00F8A4008D3A34 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		759C83FC1B010863008D3A34 /* kannuuAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kannuuAPI.h; sourceTree = "<group>"; };
+		759C83FD1B010863008D3A34 /* KannuuIndexController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KannuuIndexController.h; sourceTree = "<group>"; };
+		759C83FE1B010863008D3A34 /* libkannuu.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libkannuu.a; sourceTree = "<group>"; };
+		759C84001B0108CE008D3A34 /* AddressBookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookController.h; sourceTree = "<group>"; };
+		759C84011B0108CE008D3A34 /* AddressBookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookController.m; sourceTree = "<group>"; };
+		759C84031B010911008D3A34 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		759C84041B010911008D3A34 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		75CAEB701B0E62BB00A9DB7C /* FavoritesViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewControllerExtensions.swift; sourceTree = "<group>"; };
+		75FC10FA1B190C3C00AD99F4 /* DashboardBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardBarViewController.swift; sourceTree = "<group>"; };
 		8EF27BB51AAFFD7400F93112 /* keyboardTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = keyboardTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF27BB91AAFFD7400F93112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EF27BBA1AAFFD7400F93112 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,7 +183,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7506F7CD1B0826F2001F78EA /* AddressBook.framework in Frameworks */,
+				7506F7CE1B0826F2001F78EA /* AddressBookUI.framework in Frameworks */,
 				D89068A4E627EB6EFC8F735E /* Pods_keyboardTest.framework in Frameworks */,
+				759C83FF1B010863008D3A34 /* libkannuu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,11 +217,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7506F7BC1B08150D001F78EA /* APAddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				7506F7BD1B081533001F78EA /* APAddress.h */,
+				7506F7BE1B081533001F78EA /* APAddress.m */,
+				7506F7BF1B081533001F78EA /* APAddressBook.h */,
+				7506F7C01B081533001F78EA /* APAddressBook.m */,
+				7506F7C11B081533001F78EA /* APContact.h */,
+				7506F7C21B081533001F78EA /* APContact.m */,
+				7506F7C31B081533001F78EA /* APPhoneWithLabel.h */,
+				7506F7C41B081533001F78EA /* APPhoneWithLabel.m */,
+				7506F7C51B081533001F78EA /* APSocialProfile.h */,
+				7506F7C61B081533001F78EA /* APSocialProfile.m */,
+				7506F7C71B081533001F78EA /* APTypes.h */,
+			);
+			name = APAddressBook;
+			sourceTree = "<group>";
+		};
 		759C83E81B00D80C008D3A34 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				7563C8C11B16006400C7E311 /* KeyboardViewController.swift */,
 				E0A2D9EC1AD9C0DA006A5C90 /* TestCollectionViewController.swift */,
 				E0A2D9ED1AD9C0DA006A5C90 /* TestCollectionViewController.xib */,
+				163863C61B038E9E00680EDD /* FavoritesTableViewController.swift */,
 				E0A2D9EE1AD9C0DA006A5C90 /* TestTableViewController.swift */,
 				E0A2D9EF1AD9C0DA006A5C90 /* TestTableViewController.xib */,
 			);
@@ -213,6 +271,9 @@
 		8EF27BB71AAFFD7400F93112 /* keyboardTest */ = {
 			isa = PBXGroup;
 			children = (
+				759C84031B010911008D3A34 /* AddressBook.framework */,
+				759C84041B010911008D3A34 /* AddressBookUI.framework */,
+				7506F7BC1B08150D001F78EA /* APAddressBook */,
 				E09BFE741AEDBABC00A50133 /* Chameleon */,
 				E09BFE5B1AEDB23900A50133 /* Profile */,
 				E06682AF1AE02DB200B2A727 /* Prompts */,
@@ -220,11 +281,17 @@
 				E03459F41AD2F10B0044310A /* ToggledViewController.swift */,
 				759C83F21B00DE5A008D3A34 /* BrowseViewController.swift */,
 				759C83F61B00EF31008D3A34 /* FavoritesViewController.swift */,
+				75CAEB701B0E62BB00A9DB7C /* FavoritesViewControllerExtensions.swift */,
 				759C83F81B00F4F2008D3A34 /* RecentsViewController.swift */,
 				759C83FA1B00F8A4008D3A34 /* SettingsViewController.swift */,
 				E0A2D9FA1AD9C10D006A5C90 /* Cells */,
 				E0A2D9E81AD9C058006A5C90 /* View Controllers */,
 				8EF27BBE1AAFFD7400F93112 /* Main.storyboard */,
+				759C84001B0108CE008D3A34 /* AddressBookController.h */,
+				759C84011B0108CE008D3A34 /* AddressBookController.m */,
+				759C83FC1B010863008D3A34 /* kannuuAPI.h */,
+				759C83FD1B010863008D3A34 /* KannuuIndexController.h */,
+				759C83FE1B010863008D3A34 /* libkannuu.a */,
 				E0A2D9E91AD9C066006A5C90 /* Paging */,
 				E0A2D9E71AD9C031006A5C90 /* Images */,
 				8EF27BC11AAFFD7400F93112 /* Images.xcassets */,
@@ -324,6 +391,7 @@
 		E0A2D9E81AD9C058006A5C90 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				75FC10FA1B190C3C00AD99F4 /* DashboardBarViewController.swift */,
 				759C83E21AFFBFD1008D3A34 /* RightDrawerTableViewController.swift */,
 				E09BFE701AEDB52D00A50133 /* ProfileViewController.swift */,
 				759C83E81B00D80C008D3A34 /* Contacts */,
@@ -530,28 +598,38 @@
 				E06B4CF51AD323AD00EBAC69 /* PagingViewController1.swift in Sources */,
 				759C83F71B00EF31008D3A34 /* FavoritesViewController.swift in Sources */,
 				E06682AC1AE02DA700B2A727 /* SwiftPrompts.swift in Sources */,
+				75CAEB711B0E62BB00A9DB7C /* FavoritesViewControllerExtensions.swift in Sources */,
 				E09BFE851AEDBAF100A50133 /* UIColor+Chameleon.m in Sources */,
+				7506F7CA1B081533001F78EA /* APContact.m in Sources */,
+				759C84021B0108CE008D3A34 /* AddressBookController.m in Sources */,
 				E0A2D9F41AD9C0DA006A5C90 /* TestTableViewController.swift in Sources */,
 				E06B4CF71AD323BF00EBAC69 /* PagingViewController2.swift in Sources */,
 				E06B4CFB1AD4BFB500EBAC69 /* PagingViewController0_0.swift in Sources */,
 				E0A2D9F81AD9C102006A5C90 /* FriendTableViewCell.swift in Sources */,
+				7506F7CB1B081533001F78EA /* APPhoneWithLabel.m in Sources */,
+				7506F7C81B081533001F78EA /* APAddress.m in Sources */,
 				E09BFE841AEDBAF100A50133 /* NSArray+Chameleon.m in Sources */,
 				E09BFE591AEDB22E00A50133 /* FXBlurView.m in Sources */,
 				759C83E31AFFBFD1008D3A34 /* RightDrawerTableViewController.swift in Sources */,
 				E06682AD1AE02DA700B2A727 /* SwiftPromptsView.swift in Sources */,
+				7506F7CC1B081533001F78EA /* APSocialProfile.m in Sources */,
 				E09BFE5A1AEDB22E00A50133 /* TWTButton.swift in Sources */,
 				E00C21961ADC5C870071A1F7 /* ProfileMenuCell.swift in Sources */,
 				759C83F31B00DE5A008D3A34 /* BrowseViewController.swift in Sources */,
 				E09BFE831AEDBAF100A50133 /* Constants.swift in Sources */,
+				7506F7C91B081533001F78EA /* APAddressBook.m in Sources */,
 				E06B4CF91AD32B6500EBAC69 /* CAPSPageMenu.swift in Sources */,
+				163863C71B038E9E00680EDD /* FavoritesTableViewController.swift in Sources */,
 				E09BFE871AEDBAF100A50133 /* UIViewController+Chameleon.m in Sources */,
 				E09BFE821AEDBAF100A50133 /* ChameleonStatusBar.m in Sources */,
 				8EF27BBD1AAFFD7400F93112 /* PagingViewController0.swift in Sources */,
 				E0A2D9F01AD9C0DA006A5C90 /* MoodCollectionViewCell.swift in Sources */,
+				75FC10FB1B190C3C00AD99F4 /* DashboardBarViewController.swift in Sources */,
 				E03459F51AD2F10B0044310A /* ToggledViewController.swift in Sources */,
 				759C83FB1B00F8A4008D3A34 /* SettingsViewController.swift in Sources */,
 				E09BFE861AEDBAF100A50133 /* UIColor+CIELAB.m in Sources */,
 				E09BFE581AEDB22E00A50133 /* AvatarImageView.swift in Sources */,
+				7563C8C21B16006400C7E311 /* KeyboardViewController.swift in Sources */,
 				E09BFE711AEDB52D00A50133 /* ProfileViewController.swift in Sources */,
 				759C83F91B00F4F2008D3A34 /* RecentsViewController.swift in Sources */,
 				E0A2D9F21AD9C0DA006A5C90 /* TestCollectionViewController.swift in Sources */,
@@ -685,12 +763,17 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = keyboardTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/keyboardTest",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "keyboardTest/keyboardTestHeader-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -703,18 +786,22 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = keyboardTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/keyboardTest",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "keyboardTest/keyboardTestHeader-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		8EF27BD81AAFFD7400F93112 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8090CA078E23A4642F2EF38 /* Pods-keyboardTest.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -734,7 +821,6 @@
 		};
 		8EF27BD91AAFFD7400F93112 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C09C9441EFBF9D49DC6C9349 /* Pods-keyboardTest.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 3 Callistos Services. All rights reserved.
 //
 
+import UIKit
+
 class RecentsViewController: UIViewController {
     
     var parentNavigationController : UINavigationController?

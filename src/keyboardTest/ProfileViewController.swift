@@ -10,15 +10,24 @@ import UIKit
 import QuartzCore
 import CoreGraphics
 
-let offset_HeaderStop:CGFloat = 150.0 // At this offset the Header stops its transformations
-let offset_B_LabelHeader:CGFloat = 111.0 // At this offset the Black label reaches the Header
+let offset_HeaderStop:CGFloat = 122.0 // At this offset the Header stops its transformations
+let offset_B_LabelHeader:CGFloat = 54.0 // At this offset the Black label reaches the Header
 let distance_W_LabelHeader:CGFloat = 35.0 // The distance between the bottom of the Header and the top of the White Label
 
 class ProfileViewController: UIViewController, UIScrollViewDelegate {
-    var parentNavigationController : UINavigationController?
+
     var image:UIImage? = nil
     var nameLabel:String? = nil
+    var coLabel:String? = nil
+    var mobileLabel:String? = nil
+    var emailLabel:String? = nil
+    var homeLabel:String? = nil
+    var jobTitleLabel:String? = nil
     
+    @IBOutlet var mobileView: UIView!
+    @IBOutlet var homeView: UIView!
+    @IBOutlet var emailView: UIView!
+    @IBOutlet var jobView: UIView!
     @IBOutlet var scrollView:UIScrollView!
     @IBOutlet var bgView: UIView!
     @IBOutlet var avatarImage:UIImageView!
@@ -27,34 +36,46 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet var headerLabel:UILabel!
     @IBOutlet var headerImageView:UIImageView!
     @IBOutlet var headerBlurImageView:UIImageView!
+    @IBOutlet var companyLabel: UILabel!
+    @IBOutlet var mobilePhone: UILabel!
+    @IBOutlet var email: UILabel!
+    @IBOutlet var homePhone: UILabel!
+    @IBOutlet var jobTitle: UILabel!
+    
     var blurredHeaderImageView:UIImageView?
+    var fav: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        let image = UIImage(named: "back")
+        var back = UIButton(frame: CGRect(x: 8, y: 25, width: 20, height: 18))
+        back.setImage(image, forState: UIControlState.Normal)
+        back.layer.zPosition = 3
+        back.addTarget(self, action: "goBack", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(back)
         
-        self.view.backgroundColor = UIColor(gradientStyle: UIGradientStyle.TopToBottom, withFrame: self.view.frame, andColors: [FlatHKDark(), FlatHKLight()])
-        scrollView.delegate = self
-        
-        var backToSearch = UIBarButtonItem(title: "Back", style:UIBarButtonItemStyle.Plain , target: self, action: "backToSearch")
-        navigationItem.leftBarButtonItem = backToSearch
-        navigationController?.navigationBar.backgroundColor = UIColor(red: 1/255, green: 20/255, blue: 55/255, alpha: 0.4)
-        navigationController?.navigationBar.barStyle = UIBarStyle(rawValue: 2)!
-        let font: UIFont = UIFont(name: "AvenirNext-Regular", size: 17)!
-        let color = UIColor.whiteColor()
-        navigationController?.navigationBar.topItem?.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: font, NSForegroundColorAttributeName: color], forState: .Normal)
+        let favImage = UIImage(named: "love")
+        fav = UIButton(frame: CGRect(x: (self.view.frame.width - 40), y: 25, width: 32, height: 32))
+        fav.setImage(favImage, forState: UIControlState.Normal)
+        fav.layer.zPosition = 3
+        fav.addTarget(self, action: "favoriteProfile", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(fav)
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        self.view.backgroundColor = UIColor(gradientStyle: UIGradientStyle.TopToBottom, withFrame: self.view.frame, andColors: [FlatHKDark(), FlatHKLight()])
+        scrollView.delegate = self
+        
         // Header - Image
-        headerImageView = UIImageView(frame: CGRectMake(0, 0, view.frame.width, 170))
-        headerImageView.image = image?.blurredImageWithRadius(20, iterations: 20, tintColor: UIColor.flatHKDarkColor())
+        headerImageView = UIImageView(frame: header.bounds)
+        headerImageView.image = image?.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
         headerImageView.contentMode = UIViewContentMode.ScaleAspectFill
         header.insertSubview(headerImageView!, belowSubview: headerLabel)
         
         // Header - Blurred Image
-        headerBlurImageView = UIImageView(frame: CGRectMake(0, 0, view.frame.width, 170))
-        headerBlurImageView.image = image?.blurredImageWithRadius(14, iterations: 20, tintColor: UIColor.flatHKDarkColor())
+        headerBlurImageView = UIImageView(frame: header.bounds)
+        headerBlurImageView.image = image?.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
         headerBlurImageView.contentMode = UIViewContentMode.ScaleAspectFill
         headerBlurImageView.alpha = 0.0
         header.insertSubview(headerBlurImageView!, belowSubview: headerLabel)
@@ -62,20 +83,30 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
         header.clipsToBounds = true
         
         var profileImageView: UIImageView! = UIImageView(frame: avatarImage.bounds)
-        profileImageView.image = image!
+        profileImageView.image = image
         profileImageView.contentMode = UIViewContentMode.ScaleAspectFill
         avatarImage.insertSubview(profileImageView!, atIndex: 0)
         
-        //headerLabel.text = nameLabel
+        headerLabel.text = nameLabel
         baseLabel.text = nameLabel
-    }
-    
-    func backToSearch() {
-        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        companyLabel.text = coLabel
+        mobilePhone.text = mobileLabel
+        email.text = emailLabel
+        homePhone.text = homeLabel
+        jobTitle.text = jobTitleLabel
+        
+        if ((homePhone.text ) == nil) {
+            self.homeView.removeFromSuperview()
+        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func goBack() {
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        println("back")
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -107,16 +138,7 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
             //  ------------ Label
             
             let labelTransform = CATransform3DMakeTranslation(0, max(-distance_W_LabelHeader, offset_B_LabelHeader - (offset) ), 0)
-            
-            if (offset > 236) {
-                self.title = nameLabel
-            }
-            else {
-                self.title = ""
-            }
-            
             headerLabel.layer.transform = labelTransform
-            
             
             //  ------------ Blur
             
@@ -133,11 +155,13 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
                 
                 if avatarImage.layer.zPosition < header.layer.zPosition{
                     header.layer.zPosition = 0
+                    header.clipsToBounds = true
                 }
                 
             }else {
                 if avatarImage.layer.zPosition >= header.layer.zPosition{
                     header.layer.zPosition = 2
+                    //header.clipsToBounds = false
                 }
             }
         }
@@ -145,14 +169,15 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
         // Apply Transformations
         
         header.layer.transform = headerTransform
-        
         avatarImage.layer.transform = avatarTransform
     }
     
-    @IBAction func shamelessActionThatBringsYouToMyTwitterProfile() {
-        
-        if !UIApplication.sharedApplication().openURL(NSURL(string:"twitter://user?screen_name=bitwaker")!){
-            UIApplication.sharedApplication().openURL(NSURL(string:"https://twitter.com/bitwaker")!)
-        }
+    func favoriteProfile() {
+        let alertView = UIAlertController(title: "Add to Favorites", message: "Would you like to add this person to your Favorites?", preferredStyle: .Alert)
+        alertView.addAction(UIAlertAction(title: "Add", style: .Default, handler: { (alertAction) -> Void in
+            println("Click of add button")
+        }))
+        alertView.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        presentViewController(alertView, animated: true, completion: nil)
     }
 }

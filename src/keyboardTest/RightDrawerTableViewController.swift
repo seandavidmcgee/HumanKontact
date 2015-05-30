@@ -43,9 +43,9 @@ class RightDrawerTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        clearHighlightedDrawer(highlightedIndex, animated: false)
-        setHighlightedDrawer(indexPath.row-2, animated: false)
-        highlightedIndex = indexPath.row-2
+        self.clearHighlightedDrawer(highlightedIndex, animated: false)
+        self.setHighlightedDrawer(indexPath.row-2, animated: false)
+        self.highlightedIndex = indexPath.row-2
         
         if indexPath.row == 2 {
             appDelegate.centerViewController = appDelegate.drawerFavsViewController()

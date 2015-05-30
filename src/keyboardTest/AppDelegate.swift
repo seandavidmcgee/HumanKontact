@@ -27,10 +27,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window!.rootViewController = drawerViewController
+        window!.makeKeyAndVisible()
         
-        window?.rootViewController = drawerViewController
+        // Override point for customization after application launch.
+        /*application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound | UIUserNotificationType.Alert | UIUserNotificationType.Badge, categories: nil))*/
+        let notificationType = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
+        let acceptAction = UIMutableUserNotificationAction()
+        acceptAction.identifier = "Call"
+        acceptAction.title = "Make a Call"
+        acceptAction.activationMode = UIUserNotificationActivationMode.Background
+        acceptAction.destructive = false
+        acceptAction.authenticationRequired = false
         
-        window?.makeKeyAndVisible()
+        let declineAction = UIMutableUserNotificationAction()
+        declineAction.identifier = "Decline"
+        declineAction.title = "Cancel"
+        declineAction.activationMode = UIUserNotificationActivationMode.Background
+        declineAction.destructive = false
+        declineAction.authenticationRequired = false
+        
+        
+        let category = UIMutableUserNotificationCategory()
+        category.identifier = "invite"
+        category.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
+        //category.setActions([acceptAction], forContext: UIUserNotificationActionContext.Default)
+        let categories = NSSet(array: [category])
+        let settings = UIUserNotificationSettings(forTypes: notificationType, categories: categories as Set<NSObject>!)
+        application.registerUserNotificationSettings(settings)
         
         return true
     }
