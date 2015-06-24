@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-keyboardTest-APAddressBook.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-keyboardTest-KGFloatingDrawer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5017874F4090DA3890A61CC4</key>
+		<key>4EDF04BD127303FD09DD764E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF068C573CBFC5D57F1D995D</key>
+		<key>B7C0F05248341EA888C87D67</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE42379B750EB431CF25EBBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

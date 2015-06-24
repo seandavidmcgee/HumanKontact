@@ -10,7 +10,7 @@
 @import AddressBook;
 @import AddressBookUI;
 
-#define kCRXDefaultSizeForIndexStrings	10
+#define kCRXDefaultSizeForIndexStrings	40
 #define kCRXDefaultNamePriority			3
 #define kCRXNickNamePriority			2
 #define kCRXJobTitlePriority			1
@@ -22,8 +22,8 @@
 
 typedef NS_ENUM(NSInteger, CRXIndexPriorityType)
 {
-    CRXIndexPriorityTypeLastName,
-    CRXIndexPriorityTypeFirstName = 0
+    CRXIndexPriorityTypeFirstName = 0,
+    CRXIndexPriorityTypeLastName
 };
 
 typedef NS_ENUM(NSInteger, CRXCaseSensitiveType)
@@ -63,7 +63,7 @@ void refreshAddressBookProcedure(ABAddressBookRef addressBook, CFDictionaryRef i
 
 + (NSString *)indexFile
 {
-    return [[self documentsDirectory] stringByAppendingPathComponent:@"Sample.kindex"];
+    return [[self documentsDirectory] stringByAppendingPathComponent:@"ABSample"];
 }
 
 - (void)dealloc
@@ -115,7 +115,8 @@ void refreshAddressBookProcedure(ABAddressBookRef addressBook, CFDictionaryRef i
         NSInteger count = ABAddressBookGetPersonCount(self.addressBook);
         CFArrayRef people = ABAddressBookCopyArrayOfAllPeople(self.addressBook);
         NSString *indexFile = [self.class indexFile];
-        _indexController = [[KannuuIndexController alloc] initWithControllerMode:KannuuControllerModeCreate indexFilePath:indexFile numberOfOptions:0];
+
+        _indexController = [[KannuuIndexController alloc] initWithControllerMode:KannuuControllerModeCreate indexFilePath:indexFile numberOfOptions:9];
         for(int i = 0; i < count; i++)
         {
             ABRecordRef person = CFArrayGetValueAtIndex(people, i);
@@ -129,7 +130,7 @@ void refreshAddressBookProcedure(ABAddressBookRef addressBook, CFDictionaryRef i
 - (void)addRecord:(ABRecordRef)record changeCase:(CRXCaseSensitiveType)changeCase
 {
     NSError				*error = nil;
-    //NSMutableString		*lfmName = [NSMutableString stringWithCapacity:kCRXDefaultSizeForIndexStrings];
+    NSMutableString		*lfmName = [NSMutableString stringWithCapacity:kCRXDefaultSizeForIndexStrings];
     NSMutableString		*fmlName = [NSMutableString stringWithCapacity:kCRXDefaultSizeForIndexStrings];
     NSNumber			*recordID = [NSNumber numberWithInt:ABRecordGetRecordID(record)];
     
@@ -147,17 +148,12 @@ void refreshAddressBookProcedure(ABAddressBookRef addressBook, CFDictionaryRef i
     // dont add job title
     //jobTitle = [self stringForABPropertyID:kABPersonJobTitleProperty record:record changeCase:changeCase];
     
-    if(nil != lastName)
-    {
-        //    [lfmName appendString:lastName];
-    }
-    
     if(nil != firstName)
     {
         [fmlName appendString:firstName];
-        //    if([lfmName length] > 0)
-        //        [lfmName appendString:kCRXCommmaString];
-        //    [lfmName appendFormat:@" %@", firstName];
+        if([lfmName length] > 0)
+            [lfmName appendString:kCRXCommmaString];
+        [lfmName appendFormat:@" %@", firstName];
     }
     
     if(nil != middleName)
@@ -165,14 +161,19 @@ void refreshAddressBookProcedure(ABAddressBookRef addressBook, CFDictionaryRef i
         if([fmlName length] > 0)
             [fmlName appendString:kCRXSpaceString];
         [fmlName appendString:middleName];
-        //    if([lfmName length] > 0)
-        //        [lfmName appendString:kCRXSpaceString];
-        //    [lfmName appendFormat:@"%@ ", middleName];
+        if([lfmName length] > 0)
+            [lfmName appendString:kCRXSpaceString];
+        [lfmName appendFormat:@"%@ ", middleName];
     }
     
     if(nil != lastName)
     {
         [fmlName appendFormat:@" %@", lastName];
+    }
+    
+    if(nil != lastName)
+    {
+        [lfmName appendString:lastName];
     }
     
     if([fmlName length] > 0)
@@ -182,12 +183,12 @@ void refreshAddressBookProcedure(ABAddressBookRef addressBook, CFDictionaryRef i
                                forData:[recordID stringValue] priority:kCRXDefaultNamePriority error:&error];
     }
     
-    //if([lfmName length] > 0)
-    //{
-    //    [lfmName setString:[lfmName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
-    //    [self.indexController addIndex:lfmName
-    //                           forData:[recordID stringValue] priority:kCRXDefaultNamePriority error:&error];
-    //}
+    if([lfmName length] > 0 && [fmlName length] <= 0)
+    {
+        [lfmName setString:[lfmName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
+        [self.indexController addIndex:lfmName
+                               forData:[recordID stringValue] priority:kCRXDefaultNamePriority error:&error];
+    }
     
     if(nil != nickName)
     {

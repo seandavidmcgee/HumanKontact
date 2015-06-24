@@ -7,7 +7,6 @@
 //
 
 import UIKit
-var keyboardOpen : Int = 0
 
 class ToggledViewController: UIViewController, CAPSPageMenuDelegate {
     

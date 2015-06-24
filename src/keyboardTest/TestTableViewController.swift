@@ -68,7 +68,6 @@ class TestTableViewController: UITableViewController {
         
         // Configure the cell...
         cell.nameLabel.text = namesArray[indexPath.row]
-        cell.sourceLabel.text = sourcesArray[indexPath.row]
         cell.photoImageView.image = UIImage(named: photoNameArray[indexPath.row])
         
         return cell
@@ -98,9 +97,6 @@ class TestTableViewController: UITableViewController {
         vc.image = pickedImage
         vc.nameLabel = pickedName
         vc.coLabel = pickedCompany
-        vc.mobileLabel = pickedMobile
-        vc.homeLabel = pickedHome
-        vc.emailLabel = pickedEmail
         vc.jobTitleLabel = pickedTitle
         
         parentNavigationController?.pushViewController(vc, animated: true)

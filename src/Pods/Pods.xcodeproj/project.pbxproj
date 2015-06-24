@@ -7,243 +7,362 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		170964C261E55EBE2A05948A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC154F49EA87229DD5197051 /* Foundation.framework */; };
-		23164735F0AD1C555D8A2E69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC154F49EA87229DD5197051 /* Foundation.framework */; };
-		252F4407F0D1420B88C7C291 /* KGDrawerAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4C6BC02936B799820D7A8B /* KGDrawerAnimating.swift */; };
-		2BBFBA5A6DDE0E919EED957D /* KGDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8FD3706BF50E1170C0CC3 /* KGDrawerViewController.swift */; };
-		59170A4279C7B0D0D59FA000 /* KGFloatingDrawer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1637283D177FE58B40E5C1A2 /* KGFloatingDrawer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6483C4A668CC84FB8FBBACC5 /* Pods-keyboardTest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 166D1C795FAB0FB36D83D8FA /* Pods-keyboardTest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		691C057E0874636DE3B35B5D /* Pods-keyboardTest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5686B6F19B01BF6515829BBA /* Pods-keyboardTest-dummy.m */; };
-		8C77B08727BA76B807008909 /* KGDrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DBA6E1C3B17C257B68EBD0 /* KGDrawerView.swift */; };
-		97DECAA5A8F2D72ED98E2765 /* Pods-keyboardTest-KGFloatingDrawer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C09D141129084776C82D22F0 /* Pods-keyboardTest-KGFloatingDrawer-dummy.m */; };
-		C41765BCBF348CE24194182E /* Pods-keyboardTest-KGFloatingDrawer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9906328FD30550577EA8CA6D /* Pods-keyboardTest-KGFloatingDrawer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F81FDD62BCF680D8EB7618DE /* KGDrawerSpringAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86A0787C80DA8299EB75BD8 /* KGDrawerSpringAnimator.swift */; };
+		0C789B933DF3F2259809013A /* Pods-keyboardTest-APAddressBook-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CC29EB8FCEE6832F0DB98E07 /* Pods-keyboardTest-APAddressBook-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C980B0E4384A1116199A169 /* KGDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897B7714BF338248FE275A4B /* KGDrawerViewController.swift */; };
+		0F9AB547B9E4986D4D2BDB9F /* APSocialProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = E9095BE2D1B26832026D5448 /* APSocialProfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DD02026B48E353431389978 /* APAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 6647AAD090DAAAB0E750B58B /* APAddress.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		21121777168BC534C6D58144 /* APPhoneWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3474AE0A101717B5BFA15 /* APPhoneWithLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2554EB7AD771AAB9135EDE1F /* APAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 58F418BE25660FABF9B04EB1 /* APAddress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DB9246877A0AD8CB2C2C875 /* APContact.h in Headers */ = {isa = PBXBuildFile; fileRef = 514A584E9F23255203FBD307 /* APContact.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3240E17BCA7835C9147E65BB /* KGDrawerAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8F023F667B47B4328343C8 /* KGDrawerAnimating.swift */; };
+		3835AC08EA86A1526B07C3F3 /* APAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1591048DED5A2E3B2F6A3C56 /* APAddressBook.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		407AA1A7F5C597B7322B7062 /* KGDrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B741838ACC1EA20446D6F8EC /* KGDrawerView.swift */; };
+		5069D7FCD49813614B54EC74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5A1D21AD9B41C9CA839764 /* Foundation.framework */; };
+		56CFEA6F11911C107ED2BDFD /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7303EFB089E66FF7FE9800 /* AddressBook.framework */; };
+		61F6A7B974F714D336528C66 /* APContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 363D75E7C2ECA9BABBAC088E /* APContact.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		65BEA1B9E3D08A86B0DD9042 /* APPhoneWithLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DB101856E7417FA047095D8 /* APPhoneWithLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86E79ECA99EF60A09B9D0409 /* APTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7A04D073EE1EDD5BD4F87F /* APTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AD932DF6F184275F09A85F9 /* APSocialProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2C66D9633ED87D2074DBCB /* APSocialProfile.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A027D645DFFC01C71493B79D /* Pods-keyboardTest-KGFloatingDrawer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3586ABA7457C2896BCB1A63C /* Pods-keyboardTest-KGFloatingDrawer-dummy.m */; };
+		AD590506BFACB57F58FCE94C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5A1D21AD9B41C9CA839764 /* Foundation.framework */; };
+		B7BC24E8911627CF09317251 /* Pods-keyboardTest-KGFloatingDrawer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 36677FCC5981F085F3402D8F /* Pods-keyboardTest-KGFloatingDrawer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1BB80211BA5E811C9DCDDE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5A1D21AD9B41C9CA839764 /* Foundation.framework */; };
+		C86431D1BC66243FDA276022 /* Pods-keyboardTest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 269903B4C6AAF66ED0A58655 /* Pods-keyboardTest-dummy.m */; };
+		D10B6A2296CC9F181CFB2D7F /* KGDrawerSpringAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DD772051B20891335EAC7D /* KGDrawerSpringAnimator.swift */; };
+		DE6F34C1D16D251936AD3C64 /* Pods-keyboardTest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6913F40CD1E2139EBFFBC070 /* Pods-keyboardTest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8B2A982B5B73845E4FBDA01 /* KGFloatingDrawer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C6C228683BC8F8649C4E76A /* KGFloatingDrawer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74E189EBA2232A1F5C78424 /* Pods-keyboardTest-APAddressBook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E16283FB152C7BE9D231173 /* Pods-keyboardTest-APAddressBook-dummy.m */; };
+		F9856771AD6B5159461A701B /* APAddressBook.h in Headers */ = {isa = PBXBuildFile; fileRef = 89CF9AF15E590DBAECB031EC /* APAddressBook.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F9BFD4BD338964F31A24A2A6 /* PBXContainerItemProxy */ = {
+		C76EB49BFA75ADDE556BA7B1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9474282A66A8D9EEA06F55C5 /* Project object */;
+			containerPortal = EA187AB2229A081849F60549 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CF068C573CBFC5D57F1D995D;
+			remoteGlobalIDString = B7C0F05248341EA888C87D67;
 			remoteInfo = "Pods-keyboardTest-KGFloatingDrawer";
+		};
+		E3D9947E3DE1C9F0885C1F81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA187AB2229A081849F60549 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE42379B750EB431CF25EBBC;
+			remoteInfo = "Pods-keyboardTest-APAddressBook";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0FFF5560AD0EE901968EE3E4 /* Pods-keyboardTest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-keyboardTest-frameworks.sh"; sourceTree = "<group>"; };
-		1637283D177FE58B40E5C1A2 /* KGFloatingDrawer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KGFloatingDrawer.h; sourceTree = "<group>"; };
-		166D1C795FAB0FB36D83D8FA /* Pods-keyboardTest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-keyboardTest-umbrella.h"; sourceTree = "<group>"; };
-		254378D5A3A700BC27C1FC0F /* Pods_keyboardTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_keyboardTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		28915BBC2E32964517CBD99A /* Pods-keyboardTest-KGFloatingDrawer-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-keyboardTest-KGFloatingDrawer-Private.xcconfig"; sourceTree = "<group>"; };
-		3171B472855ECA3B4A7E1D7A /* Pods-keyboardTest-KGFloatingDrawer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-keyboardTest-KGFloatingDrawer.modulemap"; sourceTree = "<group>"; };
-		35B0B3BB783A244948CE8DDC /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		50DBA6E1C3B17C257B68EBD0 /* KGDrawerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KGDrawerView.swift; sourceTree = "<group>"; };
-		5686B6F19B01BF6515829BBA /* Pods-keyboardTest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-keyboardTest-dummy.m"; sourceTree = "<group>"; };
-		6DB6109FDD140EA35F324E18 /* Pods-keyboardTest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-keyboardTest-acknowledgements.plist"; sourceTree = "<group>"; };
-		7CF8FD3706BF50E1170C0CC3 /* KGDrawerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KGDrawerViewController.swift; sourceTree = "<group>"; };
-		83D1D4E1AEDF7A71F70043C5 /* Pods-keyboardTest-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-keyboardTest-resources.sh"; sourceTree = "<group>"; };
-		91FC84FD07DDE08105D00247 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9906328FD30550577EA8CA6D /* Pods-keyboardTest-KGFloatingDrawer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-keyboardTest-KGFloatingDrawer-umbrella.h"; sourceTree = "<group>"; };
-		9A9EAAC4E15F34E137CD7D19 /* Pods-keyboardTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-keyboardTest.debug.xcconfig"; sourceTree = "<group>"; };
-		A2F365B76ABEA0E096B65FB3 /* Pods-keyboardTest-KGFloatingDrawer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-keyboardTest-KGFloatingDrawer-prefix.pch"; sourceTree = "<group>"; };
-		A86A0787C80DA8299EB75BD8 /* KGDrawerSpringAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KGDrawerSpringAnimator.swift; sourceTree = "<group>"; };
-		AC4C6BC02936B799820D7A8B /* KGDrawerAnimating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KGDrawerAnimating.swift; sourceTree = "<group>"; };
-		B91FFF358287DDC62747A7B0 /* KGFloatingDrawer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KGFloatingDrawer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC154F49EA87229DD5197051 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		C09D141129084776C82D22F0 /* Pods-keyboardTest-KGFloatingDrawer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-keyboardTest-KGFloatingDrawer-dummy.m"; sourceTree = "<group>"; };
-		C0CF7EB7C9465132C2C6DC2F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0661955FEF4EDB38ADB49C8 /* Pods-keyboardTest-KGFloatingDrawer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-keyboardTest-KGFloatingDrawer.xcconfig"; sourceTree = "<group>"; };
-		E3154ECE1918D336F992AB8F /* Pods-keyboardTest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-keyboardTest-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E9370A7B3E1B2022D37DF36B /* Pods-keyboardTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-keyboardTest.release.xcconfig"; sourceTree = "<group>"; };
-		F25AAFCC4852C78B192EF81C /* Pods-keyboardTest-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-keyboardTest-environment.h"; sourceTree = "<group>"; };
-		FFA28469884A17A243098BD8 /* Pods-keyboardTest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-keyboardTest.modulemap"; sourceTree = "<group>"; };
+		083B592275349F645F7EFCA4 /* Pods-keyboardTest-APAddressBook.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-keyboardTest-APAddressBook.modulemap"; sourceTree = "<group>"; };
+		0A1EF6C80271113E32782473 /* Pods-keyboardTest-APAddressBook-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-keyboardTest-APAddressBook-Private.xcconfig"; sourceTree = "<group>"; };
+		0FE1049430DBB1D6BBE39715 /* Pods-keyboardTest-KGFloatingDrawer-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-keyboardTest-KGFloatingDrawer-Private.xcconfig"; sourceTree = "<group>"; };
+		1591048DED5A2E3B2F6A3C56 /* APAddressBook.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APAddressBook.m; path = Pod/Core/APAddressBook.m; sourceTree = "<group>"; };
+		1D5A1D21AD9B41C9CA839764 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1E7A04D073EE1EDD5BD4F87F /* APTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APTypes.h; path = Pod/Core/APTypes.h; sourceTree = "<group>"; };
+		269903B4C6AAF66ED0A58655 /* Pods-keyboardTest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-keyboardTest-dummy.m"; sourceTree = "<group>"; };
+		27356CCEFFEDD16D72AA49E7 /* Pods-keyboardTest-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-keyboardTest-environment.h"; sourceTree = "<group>"; };
+		2CA3474AE0A101717B5BFA15 /* APPhoneWithLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APPhoneWithLabel.m; path = Pod/Core/APPhoneWithLabel.m; sourceTree = "<group>"; };
+		33EF7EF5B1B8185A9DF8C80F /* Pods-keyboardTest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-keyboardTest-acknowledgements.plist"; sourceTree = "<group>"; };
+		3586ABA7457C2896BCB1A63C /* Pods-keyboardTest-KGFloatingDrawer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-keyboardTest-KGFloatingDrawer-dummy.m"; sourceTree = "<group>"; };
+		363D75E7C2ECA9BABBAC088E /* APContact.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APContact.m; path = Pod/Core/APContact.m; sourceTree = "<group>"; };
+		36677FCC5981F085F3402D8F /* Pods-keyboardTest-KGFloatingDrawer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-keyboardTest-KGFloatingDrawer-umbrella.h"; sourceTree = "<group>"; };
+		3C6C228683BC8F8649C4E76A /* KGFloatingDrawer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KGFloatingDrawer.h; sourceTree = "<group>"; };
+		3CE4864627DD5B5AF0A69ADE /* Pods-keyboardTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-keyboardTest.release.xcconfig"; sourceTree = "<group>"; };
+		4E16283FB152C7BE9D231173 /* Pods-keyboardTest-APAddressBook-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-keyboardTest-APAddressBook-dummy.m"; sourceTree = "<group>"; };
+		4F82A8D8C0FE4CBF1D2A9695 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		514A584E9F23255203FBD307 /* APContact.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APContact.h; path = Pod/Core/APContact.h; sourceTree = "<group>"; };
+		58F418BE25660FABF9B04EB1 /* APAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APAddress.h; path = Pod/Core/APAddress.h; sourceTree = "<group>"; };
+		6647AAD090DAAAB0E750B58B /* APAddress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APAddress.m; path = Pod/Core/APAddress.m; sourceTree = "<group>"; };
+		6913F40CD1E2139EBFFBC070 /* Pods-keyboardTest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-keyboardTest-umbrella.h"; sourceTree = "<group>"; };
+		71939A97AA2579D198AB54FD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DB101856E7417FA047095D8 /* APPhoneWithLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APPhoneWithLabel.h; path = Pod/Core/APPhoneWithLabel.h; sourceTree = "<group>"; };
+		85BDA353101F9AD241F28F20 /* Pods-keyboardTest-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-keyboardTest-resources.sh"; sourceTree = "<group>"; };
+		860DCBBB904787D998173385 /* Pods_keyboardTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_keyboardTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86E773EDF422B177E8FE7F81 /* Pods-keyboardTest-APAddressBook.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-keyboardTest-APAddressBook.xcconfig"; sourceTree = "<group>"; };
+		872831AADF40E0FE76C2275F /* Pods-keyboardTest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-keyboardTest.modulemap"; sourceTree = "<group>"; };
+		897B7714BF338248FE275A4B /* KGDrawerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KGDrawerViewController.swift; sourceTree = "<group>"; };
+		89CF9AF15E590DBAECB031EC /* APAddressBook.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APAddressBook.h; path = Pod/Core/APAddressBook.h; sourceTree = "<group>"; };
+		8F5912B96653A0AD153FE3A4 /* KGFloatingDrawer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KGFloatingDrawer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FA7DD0A0041EC52D14AF551 /* Pods-keyboardTest-KGFloatingDrawer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-keyboardTest-KGFloatingDrawer-prefix.pch"; sourceTree = "<group>"; };
+		90C2BB95D46FF9AF27F379CC /* Pods-keyboardTest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-keyboardTest-frameworks.sh"; sourceTree = "<group>"; };
+		9E9808D80165BF30207729D9 /* Pods-keyboardTest-APAddressBook-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-keyboardTest-APAddressBook-prefix.pch"; sourceTree = "<group>"; };
+		A9A3BCE55F71ADE51F9DE590 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA05F1DC1D4B2AA1F9DF7238 /* APAddressBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APAddressBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1DD772051B20891335EAC7D /* KGDrawerSpringAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KGDrawerSpringAnimator.swift; sourceTree = "<group>"; };
+		B3C90A3924B41FB24F28F6FA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B741838ACC1EA20446D6F8EC /* KGDrawerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KGDrawerView.swift; sourceTree = "<group>"; };
+		CC29EB8FCEE6832F0DB98E07 /* Pods-keyboardTest-APAddressBook-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-keyboardTest-APAddressBook-umbrella.h"; sourceTree = "<group>"; };
+		CD2C66D9633ED87D2074DBCB /* APSocialProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APSocialProfile.m; path = Pod/Core/APSocialProfile.m; sourceTree = "<group>"; };
+		CD8F023F667B47B4328343C8 /* KGDrawerAnimating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KGDrawerAnimating.swift; sourceTree = "<group>"; };
+		DE7303EFB089E66FF7FE9800 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/AddressBook.framework; sourceTree = DEVELOPER_DIR; };
+		DEEC9D40AD17B6BEC3B75A75 /* Pods-keyboardTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-keyboardTest.debug.xcconfig"; sourceTree = "<group>"; };
+		E20758843E8B0B522C35650D /* Pods-keyboardTest-KGFloatingDrawer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-keyboardTest-KGFloatingDrawer.xcconfig"; sourceTree = "<group>"; };
+		E9095BE2D1B26832026D5448 /* APSocialProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APSocialProfile.h; path = Pod/Core/APSocialProfile.h; sourceTree = "<group>"; };
+		F8F3E916E4F758DF15751BE4 /* Pods-keyboardTest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-keyboardTest-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FFF19523DDE77A3DE0304972 /* Pods-keyboardTest-KGFloatingDrawer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-keyboardTest-KGFloatingDrawer.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		10A640A27BF0536A8FC2F4B9 /* Frameworks */ = {
+		87D29607D772DFDAE7F7AA75 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				170964C261E55EBE2A05948A /* Foundation.framework in Frameworks */,
+				C1BB80211BA5E811C9DCDDE8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		36F6FC5DFFAC13C854982DAB /* Frameworks */ = {
+		BB59BEB2453BB8255178BE8F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23164735F0AD1C555D8A2E69 /* Foundation.framework in Frameworks */,
+				5069D7FCD49813614B54EC74 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F31585DBC585F10D77A2D2B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56CFEA6F11911C107ED2BDFD /* AddressBook.framework in Frameworks */,
+				AD590506BFACB57F58FCE94C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		44A7300E0A98A0D0CA2AD566 = {
+		2350F2FC8585F4950BA8ABF7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				35B0B3BB783A244948CE8DDC /* Podfile */,
-				BA41214A0FE97263162E2955 /* Development Pods */,
-				6500E621A20E3DAD2A5CC703 /* Frameworks */,
-				772D21E7C7BE7591070B3C5E /* Products */,
-				72F3E591A00FC66B77243590 /* Targets Support Files */,
+				B3C90A3924B41FB24F28F6FA /* Info.plist */,
+				083B592275349F645F7EFCA4 /* Pods-keyboardTest-APAddressBook.modulemap */,
+				86E773EDF422B177E8FE7F81 /* Pods-keyboardTest-APAddressBook.xcconfig */,
+				0A1EF6C80271113E32782473 /* Pods-keyboardTest-APAddressBook-Private.xcconfig */,
+				4E16283FB152C7BE9D231173 /* Pods-keyboardTest-APAddressBook-dummy.m */,
+				9E9808D80165BF30207729D9 /* Pods-keyboardTest-APAddressBook-prefix.pch */,
+				CC29EB8FCEE6832F0DB98E07 /* Pods-keyboardTest-APAddressBook-umbrella.h */,
 			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-keyboardTest-APAddressBook";
 			sourceTree = "<group>";
 		};
-		4724D4061BF33CF94DB38EB4 /* Pods-keyboardTest */ = {
+		2A036FDF3F61626C956B3DE4 /* Pods-keyboardTest */ = {
 			isa = PBXGroup;
 			children = (
-				91FC84FD07DDE08105D00247 /* Info.plist */,
-				FFA28469884A17A243098BD8 /* Pods-keyboardTest.modulemap */,
-				E3154ECE1918D336F992AB8F /* Pods-keyboardTest-acknowledgements.markdown */,
-				6DB6109FDD140EA35F324E18 /* Pods-keyboardTest-acknowledgements.plist */,
-				5686B6F19B01BF6515829BBA /* Pods-keyboardTest-dummy.m */,
-				F25AAFCC4852C78B192EF81C /* Pods-keyboardTest-environment.h */,
-				0FFF5560AD0EE901968EE3E4 /* Pods-keyboardTest-frameworks.sh */,
-				83D1D4E1AEDF7A71F70043C5 /* Pods-keyboardTest-resources.sh */,
-				166D1C795FAB0FB36D83D8FA /* Pods-keyboardTest-umbrella.h */,
-				9A9EAAC4E15F34E137CD7D19 /* Pods-keyboardTest.debug.xcconfig */,
-				E9370A7B3E1B2022D37DF36B /* Pods-keyboardTest.release.xcconfig */,
+				71939A97AA2579D198AB54FD /* Info.plist */,
+				872831AADF40E0FE76C2275F /* Pods-keyboardTest.modulemap */,
+				F8F3E916E4F758DF15751BE4 /* Pods-keyboardTest-acknowledgements.markdown */,
+				33EF7EF5B1B8185A9DF8C80F /* Pods-keyboardTest-acknowledgements.plist */,
+				269903B4C6AAF66ED0A58655 /* Pods-keyboardTest-dummy.m */,
+				27356CCEFFEDD16D72AA49E7 /* Pods-keyboardTest-environment.h */,
+				90C2BB95D46FF9AF27F379CC /* Pods-keyboardTest-frameworks.sh */,
+				85BDA353101F9AD241F28F20 /* Pods-keyboardTest-resources.sh */,
+				6913F40CD1E2139EBFFBC070 /* Pods-keyboardTest-umbrella.h */,
+				DEEC9D40AD17B6BEC3B75A75 /* Pods-keyboardTest.debug.xcconfig */,
+				3CE4864627DD5B5AF0A69ADE /* Pods-keyboardTest.release.xcconfig */,
 			);
 			name = "Pods-keyboardTest";
 			path = "Target Support Files/Pods-keyboardTest";
 			sourceTree = "<group>";
 		};
-		6500E621A20E3DAD2A5CC703 /* Frameworks */ = {
+		2BFF7B8F11EFB9A1335D425F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				758FB3700A6399BD59146D12 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		72F3E591A00FC66B77243590 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4724D4061BF33CF94DB38EB4 /* Pods-keyboardTest */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		758FB3700A6399BD59146D12 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				BC154F49EA87229DD5197051 /* Foundation.framework */,
+				DE7303EFB089E66FF7FE9800 /* AddressBook.framework */,
+				1D5A1D21AD9B41C9CA839764 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		772D21E7C7BE7591070B3C5E /* Products */ = {
+		39F90975B579EBF9EE67F19F = {
 			isa = PBXGroup;
 			children = (
-				B91FFF358287DDC62747A7B0 /* KGFloatingDrawer.framework */,
-				254378D5A3A700BC27C1FC0F /* Pods_keyboardTest.framework */,
+				4F82A8D8C0FE4CBF1D2A9695 /* Podfile */,
+				A846BAD3B4CC832CEE81B023 /* Development Pods */,
+				7E06DB45F9CAB63E0FAE05F6 /* Frameworks */,
+				D7FA6D5F53D581F4724476AE /* Pods */,
+				4B184DCC559B7CCA1B1369C0 /* Products */,
+				85F0FA24027EAEF7C103080E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		47F7500019171E0561C9B409 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				58F418BE25660FABF9B04EB1 /* APAddress.h */,
+				6647AAD090DAAAB0E750B58B /* APAddress.m */,
+				89CF9AF15E590DBAECB031EC /* APAddressBook.h */,
+				1591048DED5A2E3B2F6A3C56 /* APAddressBook.m */,
+				514A584E9F23255203FBD307 /* APContact.h */,
+				363D75E7C2ECA9BABBAC088E /* APContact.m */,
+				7DB101856E7417FA047095D8 /* APPhoneWithLabel.h */,
+				2CA3474AE0A101717B5BFA15 /* APPhoneWithLabel.m */,
+				E9095BE2D1B26832026D5448 /* APSocialProfile.h */,
+				CD2C66D9633ED87D2074DBCB /* APSocialProfile.m */,
+				1E7A04D073EE1EDD5BD4F87F /* APTypes.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		4B184DCC559B7CCA1B1369C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA05F1DC1D4B2AA1F9DF7238 /* APAddressBook.framework */,
+				8F5912B96653A0AD153FE3A4 /* KGFloatingDrawer.framework */,
+				860DCBBB904787D998173385 /* Pods_keyboardTest.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A0CDB2E8EBA6629E9B88DA41 /* Pod */ = {
+		52BE3408CAC85AA9AC487E22 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				C1CFC8FE2DDC01833A4A0398 /* Classes */,
+				9C6E9F14239EF2FBA12E1AA3 /* Classes */,
 			);
 			path = Pod;
 			sourceTree = "<group>";
 		};
-		BA41214A0FE97263162E2955 /* Development Pods */ = {
+		781497B35E27FE6E694980F5 /* APAddressBook */ = {
 			isa = PBXGroup;
 			children = (
-				CA0A89D9E4EA145EBE26EC18 /* KGFloatingDrawer */,
+				47F7500019171E0561C9B409 /* Core */,
+				2350F2FC8585F4950BA8ABF7 /* Support Files */,
 			);
-			name = "Development Pods";
+			path = APAddressBook;
 			sourceTree = "<group>";
 		};
-		C1CFC8FE2DDC01833A4A0398 /* Classes */ = {
+		7E06DB45F9CAB63E0FAE05F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AC4C6BC02936B799820D7A8B /* KGDrawerAnimating.swift */,
-				A86A0787C80DA8299EB75BD8 /* KGDrawerSpringAnimator.swift */,
-				50DBA6E1C3B17C257B68EBD0 /* KGDrawerView.swift */,
-				7CF8FD3706BF50E1170C0CC3 /* KGDrawerViewController.swift */,
-				1637283D177FE58B40E5C1A2 /* KGFloatingDrawer.h */,
+				2BFF7B8F11EFB9A1335D425F /* iOS */,
 			);
-			path = Classes;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CA0A89D9E4EA145EBE26EC18 /* KGFloatingDrawer */ = {
+		85F0FA24027EAEF7C103080E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A0CDB2E8EBA6629E9B88DA41 /* Pod */,
-				E17DCF0BA36DEE6953E1F5D3 /* Support Files */,
+				2A036FDF3F61626C956B3DE4 /* Pods-keyboardTest */,
 			);
-			name = KGFloatingDrawer;
-			path = ../..;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		E17DCF0BA36DEE6953E1F5D3 /* Support Files */ = {
+		9A68FE52353305AD1A4ABC85 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C0CF7EB7C9465132C2C6DC2F /* Info.plist */,
-				3171B472855ECA3B4A7E1D7A /* Pods-keyboardTest-KGFloatingDrawer.modulemap */,
-				E0661955FEF4EDB38ADB49C8 /* Pods-keyboardTest-KGFloatingDrawer.xcconfig */,
-				28915BBC2E32964517CBD99A /* Pods-keyboardTest-KGFloatingDrawer-Private.xcconfig */,
-				C09D141129084776C82D22F0 /* Pods-keyboardTest-KGFloatingDrawer-dummy.m */,
-				A2F365B76ABEA0E096B65FB3 /* Pods-keyboardTest-KGFloatingDrawer-prefix.pch */,
-				9906328FD30550577EA8CA6D /* Pods-keyboardTest-KGFloatingDrawer-umbrella.h */,
+				A9A3BCE55F71ADE51F9DE590 /* Info.plist */,
+				FFF19523DDE77A3DE0304972 /* Pods-keyboardTest-KGFloatingDrawer.modulemap */,
+				E20758843E8B0B522C35650D /* Pods-keyboardTest-KGFloatingDrawer.xcconfig */,
+				0FE1049430DBB1D6BBE39715 /* Pods-keyboardTest-KGFloatingDrawer-Private.xcconfig */,
+				3586ABA7457C2896BCB1A63C /* Pods-keyboardTest-KGFloatingDrawer-dummy.m */,
+				8FA7DD0A0041EC52D14AF551 /* Pods-keyboardTest-KGFloatingDrawer-prefix.pch */,
+				36677FCC5981F085F3402D8F /* Pods-keyboardTest-KGFloatingDrawer-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "src/Pods/Target Support Files/Pods-keyboardTest-KGFloatingDrawer";
 			sourceTree = "<group>";
 		};
+		9C6E9F14239EF2FBA12E1AA3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CD8F023F667B47B4328343C8 /* KGDrawerAnimating.swift */,
+				B1DD772051B20891335EAC7D /* KGDrawerSpringAnimator.swift */,
+				B741838ACC1EA20446D6F8EC /* KGDrawerView.swift */,
+				897B7714BF338248FE275A4B /* KGDrawerViewController.swift */,
+				3C6C228683BC8F8649C4E76A /* KGFloatingDrawer.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A846BAD3B4CC832CEE81B023 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF66FF37D1924C17500321BA /* KGFloatingDrawer */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		D7FA6D5F53D581F4724476AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				781497B35E27FE6E694980F5 /* APAddressBook */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF66FF37D1924C17500321BA /* KGFloatingDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				52BE3408CAC85AA9AC487E22 /* Pod */,
+				9A68FE52353305AD1A4ABC85 /* Support Files */,
+			);
+			name = KGFloatingDrawer;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		03B0B1863D7487B845FFBF85 /* Headers */ = {
+		6CA841BFE7D391A7424F3A04 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59170A4279C7B0D0D59FA000 /* KGFloatingDrawer.h in Headers */,
-				C41765BCBF348CE24194182E /* Pods-keyboardTest-KGFloatingDrawer-umbrella.h in Headers */,
+				2554EB7AD771AAB9135EDE1F /* APAddress.h in Headers */,
+				F9856771AD6B5159461A701B /* APAddressBook.h in Headers */,
+				2DB9246877A0AD8CB2C2C875 /* APContact.h in Headers */,
+				65BEA1B9E3D08A86B0DD9042 /* APPhoneWithLabel.h in Headers */,
+				0F9AB547B9E4986D4D2BDB9F /* APSocialProfile.h in Headers */,
+				86E79ECA99EF60A09B9D0409 /* APTypes.h in Headers */,
+				0C789B933DF3F2259809013A /* Pods-keyboardTest-APAddressBook-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F3EA8D4F2A06D43E798FB81 /* Headers */ = {
+		73584464B972F59797A69831 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6483C4A668CC84FB8FBBACC5 /* Pods-keyboardTest-umbrella.h in Headers */,
+				DE6F34C1D16D251936AD3C64 /* Pods-keyboardTest-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E58678C177E2130EC450E7C8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8B2A982B5B73845E4FBDA01 /* KGFloatingDrawer.h in Headers */,
+				B7BC24E8911627CF09317251 /* Pods-keyboardTest-KGFloatingDrawer-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5017874F4090DA3890A61CC4 /* Pods-keyboardTest */ = {
+		4EDF04BD127303FD09DD764E /* Pods-keyboardTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4DCB675A094FA12AECCF2D7F /* Build configuration list for PBXNativeTarget "Pods-keyboardTest" */;
+			buildConfigurationList = F6B12EB0CEF17B600B25710E /* Build configuration list for PBXNativeTarget "Pods-keyboardTest" */;
 			buildPhases = (
-				733CCD87EBAEBDEF4D9B4FD7 /* Sources */,
-				10A640A27BF0536A8FC2F4B9 /* Frameworks */,
-				5F3EA8D4F2A06D43E798FB81 /* Headers */,
+				3A0F2A37FC04A9F5A473DED2 /* Sources */,
+				87D29607D772DFDAE7F7AA75 /* Frameworks */,
+				73584464B972F59797A69831 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D5E29D5276307EB63F4648F1 /* PBXTargetDependency */,
+				6034A8AD315A25DAB1F28DF2 /* PBXTargetDependency */,
+				51F34AC8C78610CD3DD0DB4A /* PBXTargetDependency */,
 			);
 			name = "Pods-keyboardTest";
 			productName = "Pods-keyboardTest";
-			productReference = 254378D5A3A700BC27C1FC0F /* Pods_keyboardTest.framework */;
+			productReference = 860DCBBB904787D998173385 /* Pods_keyboardTest.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CF068C573CBFC5D57F1D995D /* Pods-keyboardTest-KGFloatingDrawer */ = {
+		B7C0F05248341EA888C87D67 /* Pods-keyboardTest-KGFloatingDrawer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B786C6250A4A4A60A65720A9 /* Build configuration list for PBXNativeTarget "Pods-keyboardTest-KGFloatingDrawer" */;
+			buildConfigurationList = ADE3AF1E29318DB88EE0C1CA /* Build configuration list for PBXNativeTarget "Pods-keyboardTest-KGFloatingDrawer" */;
 			buildPhases = (
-				A3EA7A0F36DAB0A30C801A9A /* Sources */,
-				36F6FC5DFFAC13C854982DAB /* Frameworks */,
-				03B0B1863D7487B845FFBF85 /* Headers */,
+				FFF05566129AC6A3279F0E00 /* Sources */,
+				BB59BEB2453BB8255178BE8F /* Frameworks */,
+				E58678C177E2130EC450E7C8 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -251,71 +370,108 @@
 			);
 			name = "Pods-keyboardTest-KGFloatingDrawer";
 			productName = "Pods-keyboardTest-KGFloatingDrawer";
-			productReference = B91FFF358287DDC62747A7B0 /* KGFloatingDrawer.framework */;
+			productReference = 8F5912B96653A0AD153FE3A4 /* KGFloatingDrawer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DE42379B750EB431CF25EBBC /* Pods-keyboardTest-APAddressBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9EE85B8AECEFD0944469D4D /* Build configuration list for PBXNativeTarget "Pods-keyboardTest-APAddressBook" */;
+			buildPhases = (
+				985F1494A845F128ADF2F624 /* Sources */,
+				F31585DBC585F10D77A2D2B4 /* Frameworks */,
+				6CA841BFE7D391A7424F3A04 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-keyboardTest-APAddressBook";
+			productName = "Pods-keyboardTest-APAddressBook";
+			productReference = AA05F1DC1D4B2AA1F9DF7238 /* APAddressBook.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9474282A66A8D9EEA06F55C5 /* Project object */ = {
+		EA187AB2229A081849F60549 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = F34FC90805C33DA729A2CCE4 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = E2F3293AD58D73AF75E57042 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 44A7300E0A98A0D0CA2AD566;
-			productRefGroup = 772D21E7C7BE7591070B3C5E /* Products */;
+			mainGroup = 39F90975B579EBF9EE67F19F;
+			productRefGroup = 4B184DCC559B7CCA1B1369C0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5017874F4090DA3890A61CC4 /* Pods-keyboardTest */,
-				CF068C573CBFC5D57F1D995D /* Pods-keyboardTest-KGFloatingDrawer */,
+				4EDF04BD127303FD09DD764E /* Pods-keyboardTest */,
+				DE42379B750EB431CF25EBBC /* Pods-keyboardTest-APAddressBook */,
+				B7C0F05248341EA888C87D67 /* Pods-keyboardTest-KGFloatingDrawer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		733CCD87EBAEBDEF4D9B4FD7 /* Sources */ = {
+		3A0F2A37FC04A9F5A473DED2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				691C057E0874636DE3B35B5D /* Pods-keyboardTest-dummy.m in Sources */,
+				C86431D1BC66243FDA276022 /* Pods-keyboardTest-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A3EA7A0F36DAB0A30C801A9A /* Sources */ = {
+		985F1494A845F128ADF2F624 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				252F4407F0D1420B88C7C291 /* KGDrawerAnimating.swift in Sources */,
-				F81FDD62BCF680D8EB7618DE /* KGDrawerSpringAnimator.swift in Sources */,
-				8C77B08727BA76B807008909 /* KGDrawerView.swift in Sources */,
-				2BBFBA5A6DDE0E919EED957D /* KGDrawerViewController.swift in Sources */,
-				97DECAA5A8F2D72ED98E2765 /* Pods-keyboardTest-KGFloatingDrawer-dummy.m in Sources */,
+				1DD02026B48E353431389978 /* APAddress.m in Sources */,
+				3835AC08EA86A1526B07C3F3 /* APAddressBook.m in Sources */,
+				61F6A7B974F714D336528C66 /* APContact.m in Sources */,
+				21121777168BC534C6D58144 /* APPhoneWithLabel.m in Sources */,
+				8AD932DF6F184275F09A85F9 /* APSocialProfile.m in Sources */,
+				F74E189EBA2232A1F5C78424 /* Pods-keyboardTest-APAddressBook-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFF05566129AC6A3279F0E00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3240E17BCA7835C9147E65BB /* KGDrawerAnimating.swift in Sources */,
+				D10B6A2296CC9F181CFB2D7F /* KGDrawerSpringAnimator.swift in Sources */,
+				407AA1A7F5C597B7322B7062 /* KGDrawerView.swift in Sources */,
+				0C980B0E4384A1116199A169 /* KGDrawerViewController.swift in Sources */,
+				A027D645DFFC01C71493B79D /* Pods-keyboardTest-KGFloatingDrawer-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D5E29D5276307EB63F4648F1 /* PBXTargetDependency */ = {
+		51F34AC8C78610CD3DD0DB4A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-keyboardTest-KGFloatingDrawer";
-			target = CF068C573CBFC5D57F1D995D /* Pods-keyboardTest-KGFloatingDrawer */;
-			targetProxy = F9BFD4BD338964F31A24A2A6 /* PBXContainerItemProxy */;
+			target = B7C0F05248341EA888C87D67 /* Pods-keyboardTest-KGFloatingDrawer */;
+			targetProxy = C76EB49BFA75ADDE556BA7B1 /* PBXContainerItemProxy */;
+		};
+		6034A8AD315A25DAB1F28DF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-keyboardTest-APAddressBook";
+			target = DE42379B750EB431CF25EBBC /* Pods-keyboardTest-APAddressBook */;
+			targetProxy = E3D9947E3DE1C9F0885C1F81 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		302E0FC9EE7C5F5828DCDD1B /* Release */ = {
+		48A364C6D53DA54F5607FCE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9370A7B3E1B2022D37DF36B /* Pods-keyboardTest.release.xcconfig */;
+			baseConfigurationReference = 0A1EF6C80271113E32782473 /* Pods-keyboardTest-APAddressBook-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -324,25 +480,23 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-keyboardTest/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-keyboardTest-APAddressBook/Pods-keyboardTest-APAddressBook-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-keyboardTest-APAddressBook/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-keyboardTest/Pods-keyboardTest.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_keyboardTest;
+				MODULEMAP_FILE = "Target Support Files/Pods-keyboardTest-APAddressBook/Pods-keyboardTest-APAddressBook.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = APAddressBook;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		5152FEE7B363EB64A53CE245 /* Release */ = {
+		6A0C9128301D541614302DC5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -376,9 +530,9 @@
 			};
 			name = Release;
 		};
-		572D82AF024E06CE281F2773 /* Release */ = {
+		6CDC0842060C657A9FFBA666 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28915BBC2E32964517CBD99A /* Pods-keyboardTest-KGFloatingDrawer-Private.xcconfig */;
+			baseConfigurationReference = 0A1EF6C80271113E32782473 /* Pods-keyboardTest-APAddressBook-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -387,14 +541,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-keyboardTest-KGFloatingDrawer/Pods-keyboardTest-KGFloatingDrawer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-keyboardTest-KGFloatingDrawer/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-keyboardTest-APAddressBook/Pods-keyboardTest-APAddressBook-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-keyboardTest-APAddressBook/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-keyboardTest-KGFloatingDrawer/Pods-keyboardTest-KGFloatingDrawer.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-keyboardTest-APAddressBook/Pods-keyboardTest-APAddressBook.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = KGFloatingDrawer;
+				PRODUCT_NAME = APAddressBook;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -403,9 +557,9 @@
 			};
 			name = Release;
 		};
-		DE551C1619CF20B48703BAF9 /* Debug */ = {
+		6FD00B485768C0C9F5B3BB36 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28915BBC2E32964517CBD99A /* Pods-keyboardTest-KGFloatingDrawer-Private.xcconfig */;
+			baseConfigurationReference = 0FE1049430DBB1D6BBE39715 /* Pods-keyboardTest-KGFloatingDrawer-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -431,7 +585,37 @@
 			};
 			name = Debug;
 		};
-		DE658F1248AD96942669B11F /* Debug */ = {
+		7FDD3A4B1B8F0C6BAE59C293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEEC9D40AD17B6BEC3B75A75 /* Pods-keyboardTest.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-keyboardTest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-keyboardTest/Pods-keyboardTest.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_keyboardTest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A8B3DC42360FA7B583C39A08 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -470,9 +654,36 @@
 			};
 			name = Debug;
 		};
-		FF13049D7664ED000AC32515 /* Debug */ = {
+		E42102DE85563459D11B3DC4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A9EAAC4E15F34E137CD7D19 /* Pods-keyboardTest.debug.xcconfig */;
+			baseConfigurationReference = 0FE1049430DBB1D6BBE39715 /* Pods-keyboardTest-KGFloatingDrawer-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-keyboardTest-KGFloatingDrawer/Pods-keyboardTest-KGFloatingDrawer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-keyboardTest-KGFloatingDrawer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-keyboardTest-KGFloatingDrawer/Pods-keyboardTest-KGFloatingDrawer.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KGFloatingDrawer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FEBEBA850F594A5056037C4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CE4864627DD5B5AF0A69ADE /* Pods-keyboardTest.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -486,51 +697,59 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Pods-keyboardTest/Pods-keyboardTest.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = Pods_keyboardTest;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4DCB675A094FA12AECCF2D7F /* Build configuration list for PBXNativeTarget "Pods-keyboardTest" */ = {
+		ADE3AF1E29318DB88EE0C1CA /* Build configuration list for PBXNativeTarget "Pods-keyboardTest-KGFloatingDrawer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FF13049D7664ED000AC32515 /* Debug */,
-				302E0FC9EE7C5F5828DCDD1B /* Release */,
+				6FD00B485768C0C9F5B3BB36 /* Debug */,
+				E42102DE85563459D11B3DC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B786C6250A4A4A60A65720A9 /* Build configuration list for PBXNativeTarget "Pods-keyboardTest-KGFloatingDrawer" */ = {
+		E2F3293AD58D73AF75E57042 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DE551C1619CF20B48703BAF9 /* Debug */,
-				572D82AF024E06CE281F2773 /* Release */,
+				A8B3DC42360FA7B583C39A08 /* Debug */,
+				6A0C9128301D541614302DC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F34FC90805C33DA729A2CCE4 /* Build configuration list for PBXProject "Pods" */ = {
+		E9EE85B8AECEFD0944469D4D /* Build configuration list for PBXNativeTarget "Pods-keyboardTest-APAddressBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DE658F1248AD96942669B11F /* Debug */,
-				5152FEE7B363EB64A53CE245 /* Release */,
+				48A364C6D53DA54F5607FCE7 /* Debug */,
+				6CDC0842060C657A9FFBA666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6B12EB0CEF17B600B25710E /* Build configuration list for PBXNativeTarget "Pods-keyboardTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FDD3A4B1B8F0C6BAE59C293 /* Debug */,
+				FEBEBA850F594A5056037C4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9474282A66A8D9EEA06F55C5 /* Project object */;
+	rootObject = EA187AB2229A081849F60549 /* Project object */;
 }

@@ -49,11 +49,11 @@
 
 #pragma mark - Chameleon - Light Shades
 + (UIColor *)flatHKDarkColor {
-    return rgb(13, 10, 23);
+    return rgb(66, 56, 93);
 }
 
 + (UIColor *)flatHKLightColor {
-    return rgb(56, 53, 73);
+    return rgb(85, 60, 93);
 }
 
 + (UIColor *)flatBlackColor {

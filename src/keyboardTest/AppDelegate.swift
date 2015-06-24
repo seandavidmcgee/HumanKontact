@@ -172,5 +172,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             _centerViewController = newValue
         }
     }
+    
+    func call(phoneNumber:String){
+        //UIApplication.sharedApplication().openURL(NSURL(string: "tel://9809088798")!)
+        window?.rootViewController?.dismissViewControllerAnimated(true, completion: nil)
+        if UIApplication.sharedApplication().canOpenURL(NSURL(string: "tel://\(phoneNumber)")!){
+            UIApplication.sharedApplication().openURL(NSURL(string: "tel://\(phoneNumber)")!)
+        } else {
+            println("fail")
+        }
+    }
 }
 

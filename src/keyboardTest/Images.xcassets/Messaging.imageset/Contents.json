@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "Messaging@1x.png"
+      "filename" : "MessageMobile@1x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Messaging@2x.png"
+      "filename" : "MessageMobile@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "Messaging@3x.png"
+      "filename" : "MessageMobile@3x.png"
     }
   ],
   "info" : {

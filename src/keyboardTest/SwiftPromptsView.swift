@@ -16,6 +16,18 @@ import UIKit
     optional func promptWasDismissed()
 }
 
+extension String {
+    /// Truncates the string to length number of characters and
+    /// appends optional trailing string if longer
+    func truncate(length: Int, trailing: String? = nil) -> String {
+        if count(self) > length {
+            return self.substringToIndex(advance(self.startIndex, length)) + (trailing ?? "")
+        } else {
+            return self
+        }
+    }
+}
+
 class SwiftPromptsView: UIView
 {
     //Delegate var
@@ -32,6 +44,7 @@ class SwiftPromptsView: UIView
     private var promptWidth : CGFloat = 225.0
     private var promtHeader : String = "Success"
     private var promptHeaderTxtSize : CGFloat = 20.0
+    private var promptHeaderTxtTruncate: Bool = true
     private var promptContentText : String = "You have successfully posted this item to your Facebook wall."
     private var promptContentTxtSize : CGFloat = 18.0
     private var promptTopBarVisibility : Bool = false
@@ -60,6 +73,35 @@ class SwiftPromptsView: UIView
     private var secondButtonText : String = "Cancel"
     private var mainButtonColor : UIColor = UIColor(red: 155.0/255.0, green: 155.0/255.0, blue: 155.0/255.0, alpha: 1.0)
     private var secondButtonColor : UIColor = UIColor(red: 155.0/255.0, green: 155.0/255.0, blue: 155.0/255.0, alpha: 1.0)
+    
+    //Profile action buttons
+    var homeCallImage = UIImage(named: "CallHome") as UIImage?
+    var homeCallButton = UIButton()
+    var enableHomeButton : Bool = false
+    var workCallImage = UIImage(named: "CallWork") as UIImage?
+    var workCallButton = UIButton()
+    var enableWorkButton : Bool = false
+    var iPhoneCallImage = UIImage(named: "CalliPhone") as UIImage?
+    var iPhoneCallButton = UIButton()
+    var enableiPhoneButton : Bool = false
+    var mobileCallImage = UIImage(named: "CallMobile") as UIImage?
+    var mobileCallButton = UIButton()
+    var enableMobileButton : Bool = false
+    var messageImage = UIImage(named: "Messaging") as UIImage?
+    var messageButton = UIButton()
+    var iPhoneMessageImage = UIImage(named: "MessagingiPhone") as UIImage?
+    var iPhoneMessageButton = UIButton()
+    var emailImage = UIImage(named: "Email") as UIImage?
+    var emailButton = UIButton()
+    var enableEmailButton : Bool = false
+    var secondEmailButton = UIButton()
+    var enableSecondEmailButton : Bool = false
+    
+    var mobileIncluded: Bool = false
+    var workIncluded: Bool = false
+    var homeIncluded: Bool = false
+    var iPhoneIncluded: Bool = false
+    var emailIncluded: Bool = false
     
     //Gesture enabling
     private var enablePromptGestures : Bool = true
@@ -160,28 +202,101 @@ class SwiftPromptsView: UIView
             secondButton.addTarget(self, action: "panelButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
             
             swiftPrompt.addSubview(secondButton)
+            if (enableiPhoneButton == true) {
+                homeCallButton.frame = CGRectMake(15, promptHeight/2.25, 50, 50)
+                homeCallButton.setImage(homeCallImage, forState: .Normal)
+                homeCallButton.layer.cornerRadius = homeCallButton.frame.width / 2.0
+                homeCallButton.contentMode = UIViewContentMode.ScaleAspectFit
+                homeCallButton.setTitleColor(UIColor.clearColor(), forState: UIControlState.Normal)
+                homeCallButton.tag = 85
+                homeCallButton.addTarget(self, action: "didPressButton:", forControlEvents: .TouchUpInside)
             
-            let phoneImage = UIImage(named: "Call") as UIImage?
-            let phoneButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-            phoneButton.frame = CGRectMake(15, promptHeight/2.25, 50, 50)
-            phoneButton.setBackgroundImage(phoneImage, forState: .Normal)
+                swiftPrompt.addSubview(homeCallButton)
+            }
+            if (enableWorkButton == true) {
+                workCallButton.frame = CGRectMake(15, promptHeight/2.25, 50, 50)
+                workCallButton.setImage(workCallImage, forState: .Normal)
+                workCallButton.layer.cornerRadius = homeCallButton.frame.width / 2.0
+                workCallButton.contentMode = UIViewContentMode.ScaleAspectFit
+                workCallButton.setTitleColor(UIColor.clearColor(), forState: UIControlState.Normal)
+                workCallButton.tag = 86
+                workCallButton.addTarget(self, action: "didPressButton:", forControlEvents: .TouchUpInside)
             
-            swiftPrompt.addSubview(phoneButton)
+                swiftPrompt.addSubview(workCallButton)
+            }
+            if (enableiPhoneButton == true) {
+                iPhoneCallButton.frame = CGRectMake(15, promptHeight/2.25, 50, 50)
+                iPhoneCallButton.setImage(iPhoneCallImage, forState: .Normal)
+                iPhoneCallButton.layer.cornerRadius = iPhoneCallButton.frame.width / 2.0
+                iPhoneCallButton.contentMode = UIViewContentMode.ScaleAspectFit
+                iPhoneCallButton.setTitleColor(UIColor.clearColor(), forState: UIControlState.Normal)
+                iPhoneCallButton.tag = 87
+                iPhoneCallButton.addTarget(self, action: "didPressButton:", forControlEvents: .TouchUpInside)
             
-            let messageImage = UIImage(named: "Messaging") as UIImage?
-            let messageButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-            messageButton.frame = CGRectMake(promptWidth/2 - 25, promptHeight/2.25, 50, 50)
-            messageButton.setBackgroundImage(messageImage, forState: .Normal)
+                swiftPrompt.addSubview(iPhoneCallButton)
             
-            swiftPrompt.addSubview(messageButton)
+                iPhoneMessageButton.frame = CGRectMake(promptWidth/2 - 25, promptHeight/2.25, 50, 50)
+                iPhoneMessageButton.setImage(iPhoneMessageImage, forState: .Normal)
+                iPhoneMessageButton.layer.cornerRadius = messageButton.frame.width / 2.0
+                iPhoneMessageButton.contentMode = UIViewContentMode.ScaleAspectFit
+                iPhoneMessageButton.setTitleColor(UIColor.clearColor(), forState: UIControlState.Normal)
+                iPhoneMessageButton.tag = 88
+                iPhoneMessageButton.addTarget(self, action: "didPressButton:", forControlEvents: .TouchUpInside)
             
-            let emailImage = UIImage(named: "Email") as UIImage?
-            let emailButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-            emailButton.frame = CGRectMake(promptWidth-65, promptHeight/2.25, 50, 50)
-            emailButton.setBackgroundImage(emailImage, forState: .Normal)
+                swiftPrompt.addSubview(iPhoneMessageButton)
+            }
+            if (enableMobileButton == true) {
+                mobileCallButton.frame = CGRectMake(15, promptHeight/2.25, 50, 50)
+                mobileCallButton.setImage(mobileCallImage, forState: .Normal)
+                mobileCallButton.layer.cornerRadius = mobileCallButton.frame.width / 2.0
+                mobileCallButton.contentMode = UIViewContentMode.ScaleAspectFit
+                mobileCallButton.setTitleColor(UIColor.clearColor(), forState: UIControlState.Normal)
+                mobileCallButton.tag = 87
+                mobileCallButton.addTarget(self, action: "didPressButton:", forControlEvents: .TouchUpInside)
             
-            swiftPrompt.addSubview(emailButton)
-
+                swiftPrompt.addSubview(mobileCallButton)
+            
+                messageButton.frame = CGRectMake(promptWidth/2 - 25, promptHeight/2.25, 50, 50)
+                messageButton.setImage(messageImage, forState: .Normal)
+                messageButton.layer.cornerRadius = messageButton.frame.width / 2.0
+                messageButton.contentMode = UIViewContentMode.ScaleAspectFit
+                messageButton.setTitleColor(UIColor.clearColor(), forState: UIControlState.Normal)
+                messageButton.tag = 88
+                messageButton.addTarget(self, action: "didPressButton:", forControlEvents: .TouchUpInside)
+            
+                swiftPrompt.addSubview(messageButton)
+            }
+            if (enableEmailButton == true) {
+                if (!enableMobileButton && !enableiPhoneButton && !enableWorkButton && !enableHomeButton) {
+                    emailButton.frame = CGRectMake(15, promptHeight/2.25, 50, 50)
+                }
+                else {
+                    emailButton.frame = CGRectMake(promptWidth-65, promptHeight/2.25, 50, 50)
+                }
+                emailButton.setImage(emailImage, forState: .Normal)
+                emailButton.layer.cornerRadius = emailButton.frame.width / 2.0
+                emailButton.contentMode = UIViewContentMode.ScaleAspectFit
+                emailButton.setTitleColor(UIColor.clearColor(), forState: UIControlState.Normal)
+                emailButton.tag = 89
+                emailButton.addTarget(self, action: "didPressButton:", forControlEvents: .TouchUpInside)
+            
+                swiftPrompt.addSubview(emailButton)
+            }
+            if (enableSecondEmailButton == true) {
+                if ((enableMobileButton && enableiPhoneButton && enableWorkButton && enableHomeButton) == false) {
+                    secondEmailButton.frame = CGRectMake(promptWidth/2 - 25, promptHeight/2.25, 50, 50)
+                } else {
+                    secondEmailButton.frame = CGRectMake(promptWidth-15, promptHeight/2.25, 50, 50)
+                }
+                secondEmailButton.setImage(emailImage, forState: .Normal)
+                secondEmailButton.layer.cornerRadius = secondEmailButton.frame.width / 2.0
+                secondEmailButton.contentMode = UIViewContentMode.ScaleAspectFit
+                secondEmailButton.setTitleColor(UIColor.clearColor(), forState: UIControlState.Normal)
+                secondEmailButton.tag = 89
+                secondEmailButton.addTarget(self, action: "didPressButton:", forControlEvents: .TouchUpInside)
+                
+                swiftPrompt.addSubview(secondEmailButton)
+            }
         }
         
         //Add the top dismiss button if enabled
@@ -192,6 +307,11 @@ class SwiftPromptsView: UIView
             dismissButton.addTarget(self, action: "dismissPrompt", forControlEvents: UIControlEvents.TouchUpInside)
             
             swiftPrompt.addSubview(dismissButton)
+        }
+        
+        if (promptHeaderTxtTruncate)
+        {
+            promtHeader = promtHeader.truncate(17, trailing: "...")
         }
         
         //Apply animation effect to present this view
@@ -236,6 +356,72 @@ class SwiftPromptsView: UIView
         })
     }
     
+    func didPressButton(button:UIButton) {
+        var infoToSend: String! = button.titleLabel!.text!
+        if (infoToSend != nil) {
+            if (button.tag == 85 || button.tag == 86 || button.tag == 87) {
+                callNumber(infoToSend)
+            }
+            if (button.tag == 88) {
+                textNumber(infoToSend)
+            }
+            if (button.tag == 89) {
+                emailPressed(infoToSend)
+            }
+        } else {
+            return
+        }
+    }
+    
+    private func callNumber(phoneNumber:String) {
+        var strippedPhoneNumber = phoneNumber.stringByReplacingOccurrencesOfString("[^0-9 ]", withString: "", options: NSStringCompareOptions.RegularExpressionSearch, range:nil);
+        var cleanNumber = strippedPhoneNumber.removeWhitespace()
+        cleanNumber.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        if (count(cleanNumber.utf16) > 1){
+            if let phoneCallURL:NSURL = NSURL(string: "tel://\(cleanNumber)") {
+                let application:UIApplication = UIApplication.sharedApplication()
+                if (application.canOpenURL(phoneCallURL)) {
+                    application.openURL(phoneCallURL);
+                }
+            }
+        } else {
+            let alert = UIAlertView()
+            alert.title = "Sorry!"
+            alert.message = "Phone number is not available."
+            alert.addButtonWithTitle("Ok")
+            alert.show()
+        }
+    }
+    
+    private func textNumber(phoneNumber:String) {
+        var strippedPhoneNumber = phoneNumber.stringByReplacingOccurrencesOfString("[^0-9 ]", withString: "", options: NSStringCompareOptions.RegularExpressionSearch, range:nil);
+        var cleanNumber = strippedPhoneNumber.removeWhitespace()
+        cleanNumber.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        if (count(cleanNumber.utf16) > 1){
+            if let textMessageURL:NSURL = NSURL(string: "sms://\(cleanNumber)") {
+                let application:UIApplication = UIApplication.sharedApplication()
+                if (application.canOpenURL(textMessageURL)) {
+                    application.openURL(textMessageURL);
+                }
+            }
+        } else {
+            let alert = UIAlertView()
+            alert.title = "Sorry!"
+            alert.message = "Phone number is not available for text messaging."
+            alert.addButtonWithTitle("Ok")
+            alert.show()
+        }
+    }
+    
+    private func emailPressed(email:String) {
+        if let emailUrl:NSURL = NSURL(string: "mailto:\(email)") {
+            let application:UIApplication = UIApplication.sharedApplication()
+            if (application.canOpenURL(emailUrl)) {
+                application.openURL(emailUrl);
+            }
+        }
+    }
+    
     // MARK: - API Functions For The Background
     func setBlurringLevel(level: CGFloat) { blurringLevel = level }
     func setColorWithTransparency(color: UIColor) { colorWithTransparency = color }
@@ -250,6 +436,7 @@ class SwiftPromptsView: UIView
     func setPromptWidth (width : CGFloat) { promptWidth = width }
     func setPromtHeader (header : String) { promtHeader = header }
     func setPromptHeaderTxtSize (headerTxtSize : CGFloat) { promptHeaderTxtSize = headerTxtSize }
+    func setPromptHeaderTxtTruncate (headerTxtTruncate : Bool) { promptHeaderTxtTruncate = headerTxtTruncate }
     func setPromptContentText (contentTxt : String) { promptContentText = contentTxt }
     func setPromptContentTxtSize (contentTxtSize : CGFloat) { promptContentTxtSize = contentTxtSize }
     func setPromptTopBarVisibility (topBarVisibility : Bool) { promptTopBarVisibility = topBarVisibility }
@@ -266,6 +453,12 @@ class SwiftPromptsView: UIView
     func setPromptTopLineColor (topLineColor : UIColor) { promptTopLineColor = topLineColor }
     func setPromptBottomLineColor (bottomLineColor : UIColor) { promptBottomLineColor = bottomLineColor }
     func enableDoubleButtonsOnPrompt () { enableDoubleButtons = true }
+    func enableHomeButtonOnPrompt () { enableHomeButton = true }
+    func enableWorkButtonOnPrompt () { enableWorkButton = true }
+    func enableiPhoneButtonOnPrompt () { enableiPhoneButton = true }
+    func enableMobileButtonOnPrompt () { enableMobileButton = true }
+    func enableEmailButtonOnPrompt () { enableEmailButton = true }
+    func enableSecondEmailButtonOnPrompt () { enableSecondEmailButton = true }
     func setMainButtonText (buttonTitle : String) { mainButtonText = buttonTitle }
     func setSecondButtonText (secondButtonTitle : String) { secondButtonText = secondButtonTitle }
     func setMainButtonColor (colorForButton : UIColor) { mainButtonColor = colorForButton }
@@ -283,7 +476,7 @@ class SwiftPromptsView: UIView
         let masterClass : SwiftPromptsView
         
         //Gesture Recognizer Vars
-        var lastLocation:CGPoint = CGPointMake(0, 0)
+        var lastLocation:CGPoint = CGPointMake(40, 150)
         
         init(master: SwiftPromptsView)
         {

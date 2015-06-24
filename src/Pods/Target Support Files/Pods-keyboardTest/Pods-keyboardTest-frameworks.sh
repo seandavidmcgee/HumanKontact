@@ -48,8 +48,10 @@ code_sign() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'APAddressBook.framework'
   install_framework 'KGFloatingDrawer.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'APAddressBook.framework'
   install_framework 'KGFloatingDrawer.framework'
 fi

@@ -71,7 +71,6 @@ class TestCollectionViewController: UICollectionViewController, SwiftPromptsProt
         cell.backgroundImageView.layer.cornerRadius = CGRectGetWidth(cell.backgroundImageView.frame)/2.0
         cell.firstNameTitleLabel.text = photoNameArray[indexPath.row]
         cell.lastNameTitleLabel.text = lastNameArray[indexPath.row]
-        cell.moodIconImageView.image = UIImage(named: photoNameArray[indexPath.row])
     
         return cell
     }
@@ -147,10 +146,7 @@ class TestCollectionViewController: UICollectionViewController, SwiftPromptsProt
         vc.image = pickedImage
         vc.nameLabel = pickedName
         vc.coLabel = pickedCompany
-        vc.mobileLabel = pickedMobile
-        vc.homeLabel = pickedHome
-        vc.emailLabel = pickedEmail
-        vc.jobTitleLabel = pickedTitle
+        vc.jobTitleLabel = pickedTitle!
         
         self.view.window!.rootViewController!.presentViewController(navController, animated: true, completion: nil)
         prompt.dismissPrompt()

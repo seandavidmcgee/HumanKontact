@@ -11,7 +11,6 @@ import UIKit
 class MoodCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var backgroundImageView: UIImageView!
-    @IBOutlet var moodIconImageView: UIImageView!
     @IBOutlet var firstNameTitleLabel: UILabel!
     @IBOutlet var lastNameTitleLabel: UILabel!
     

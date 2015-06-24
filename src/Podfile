@@ -4,6 +4,8 @@ platform :ios, '8.0'
 
 target 'keyboardTest' do
   pod 'KGFloatingDrawer', :path => "../"
+  pod 'APAddressBook'
+  
 end
 
 target 'keyboardTestTests' do

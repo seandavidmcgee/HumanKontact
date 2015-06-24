@@ -68,7 +68,6 @@ class FavoritesTableViewController: UITableViewController {
         
         // Configure the cell...
         cell.nameLabel.text = namesArray[indexPath.row]
-        cell.sourceLabel.text = sourcesArray[indexPath.row]
         cell.photoImageView.image = UIImage(named: photoNameArray[indexPath.row])
         
         return cell
@@ -98,10 +97,7 @@ class FavoritesTableViewController: UITableViewController {
         vc.image = pickedImage
         vc.nameLabel = pickedName
         vc.coLabel = pickedCompany
-        vc.mobileLabel = pickedMobile
-        vc.homeLabel = pickedHome
-        vc.emailLabel = pickedEmail
-        vc.jobTitleLabel = pickedTitle
+        vc.jobTitleLabel = pickedTitle!
         
         self.view.window!.rootViewController!.presentViewController(navController, animated: true, completion: nil)
     }

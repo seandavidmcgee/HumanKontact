@@ -133,14 +133,19 @@ extern "C" {
     ////////////////////////////////////////////////////////////////////////////////////////
     typedef struct SIndexState
     {
-        unsigned int iNumOptions;
+        unsigned int    lenOptions;  // amount allocated for the array
+        unsigned int 	iNumOptions;
+        unsigned int    lenSubs;     // amount allocated for the array
+        unsigned int 	iNumSubs;
+        DFileLocation   iCurrentMenuLoc;
         
-        TKBool iComplete;	// Location to store single byte boolean value of whether selection is complete
-        TKBool iMore;		// Location to store single byte boolean value indicating whether there are more options for this esf
+        TKBool  		iComplete;	// Location to store single byte boolean value of whether selection is complete
+        TKBool  		iMore;		// Location to store single byte boolean value indicating whether there are more options for this esf
         
-        TChar* iEsf;		// Location to store "entry so far" string
-        TChar** iOption;	// Array of aNumOptions locations to store option strings for menu
-        TChar* iData;		// Location to store hidden data string on completion of selection
+        TChar*  		iEsf;		// Location to store "entry so far" string
+        TChar** 		iOption;	// Array of aNumOptions locations to store option strings for menu
+        TChar*  		iData;		// Location to store hidden data string on completion of selection
+        SFileSubnode** 	iSub;   	// Array of aNumSubs locations to store subnodes for selections
     } SIndexState;
     
     ////////////////////////////////////////////////////////////////////////////////////////
